@@ -153,7 +153,7 @@ x
 .box3 {
     padding-bottom: 0;
     display: grid;
-    overflow: clip;
+    overflow: hidden;
 }
 
 .box3 img {
