@@ -1,0 +1,322 @@
+:root {
+    --color-primary-light: hsl(254, 88%, 90%); /* Purple 100 */
+    --color-primary-dark: hsl(256, 67%, 59%); /* Purple 500 */
+    --color-secondary-light: hsl(31, 66%, 93%); /* Yellow 100 */
+    --color-secondary-dark: hsl(39, 100%, 71%); /* Yellow 500 */
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray: hsl(0, 0%, 97%);
+    --color-black: hsl(0, 0%, 7%);
+    --font-base: "DM Sans", sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-heavy: 500;
+    --transition: 250ms ease;
+    --tracking: -0.05ch;
+
+    /* Fluid typography */
+    --size-step--2: clamp(0.6076rem, 0.5755rem + 0.1605vw, 0.72rem);
+    --size-step--1: clamp(0.7292rem, 0.6804rem + 0.244vw, 0.9rem);
+    --size-step-0: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem);
+    --size-step-1: clamp(1.05rem, 0.9482rem + 0.5089vw, 1.4063rem);
+    --size-step-2: clamp(1.26rem, 1.1178rem + 0.7112vw, 1.7578rem);
+    --size-step-3: clamp(1.512rem, 1.3162rem + 0.979vw, 2.1973rem);
+    --size-step-4: clamp(1.8144rem, 1.5481rem + 1.3317vw, 2.7466rem);
+    --size-step-5: clamp(2.1773rem, 1.8184rem + 1.7942vw, 3.4332rem);
+    --size-step-6: clamp(2.6127rem, 2.1331rem + 2.3983vw, 4.2915rem);
+
+    /* Spacing */
+    --space-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
+    --space-2xs: clamp(0.4375rem, 0.4018rem + 0.1786vw, 0.5625rem);
+    --space-xs: clamp(0.6875rem, 0.6339rem + 0.2679vw, 0.875rem);
+    --space-s: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem);
+    --space-m: clamp(1.3125rem, 1.2054rem + 0.5357vw, 1.6875rem);
+    --space-l: clamp(1.75rem, 1.6071rem + 0.7143vw, 2.25rem);
+    --space-xl: clamp(2.625rem, 2.4107rem + 1.0714vw, 3.375rem);
+    --space-2xl: clamp(3.5rem, 3.2143rem + 1.4286vw, 4.5rem);
+    --space-3xl: clamp(5.25rem, 4.8214rem + 2.1429vw, 6.75rem);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    color: var(--color-black);
+    background-color: var(--color-gray);
+    font-size: var(--size-step-0);
+    font-family: var(--font-base);
+    font-weight: var(--font-weight-regular);
+}
+
+h1, h2, h3 {
+    font-weight: var(--font-weight-heavy);
+    letter-spacing: var(--tracking);
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--size-step-6);
+}
+
+h2 {
+    font-size: var(--size-step-4);
+}
+
+h3 {
+    font-size: var(--size-step-3);
+}
+
+.primary-light {
+    background-color: var(--color-primary-light);
+}
+
+.primary-dark {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+}
+
+.secondary-light {
+    background-color: var(--color-secondary-light);
+}
+
+.secondary-dark {
+    background-color: var(--color-secondary-dark);
+}
+
+.white {
+    background-color: var(--color-white);
+}
+
+.purple {
+    color: var(--color-primary-dark);
+}
+
+.yellow {
+    color: var(--color-secondary-dark);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-m);
+    align-content: center;
+    width: min(75rem, 90vw);
+    margin: var(--space-m) auto;
+}
+
+.box {
+    border-radius: 10px;
+    padding: var(--space-m);
+}
+
+.box > * + * {
+    margin-top: var(--space-2xs, 0.7rem);
+}
+
+.box1 {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.box1 h1 {
+    margin: 0 auto var(--space-m);
+    max-width: 10ch;
+    text-wrap: balance;
+}
+
+.box1 img {
+    max-width: 11rem;
+    margin: auto;
+}
+x
+.box1,
+.box7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box2 {
+    overflow: hidden;
+}
+
+.box2 h3,
+.box3 h3 {
+    max-width: 15ch;
+}
+
+.box7 h2 {
+    max-width: 20ch;
+}
+
+.box2 img {
+    width: 20rem;
+    max-width: none;
+}
+
+.box3 {
+    padding-bottom: 0;
+    display: grid;
+    overflow: clip;
+}
+
+.box3 img {
+    align-self: end;
+    width: 15rem;
+    margin-bottom: calc(var(--space-xl) * -1);
+}
+
+.box4 {
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+.box4 img {
+    margin: var(--space-s) auto;
+    width: min(20rem, 100%);
+}
+
+.box5 {
+    text-align: center;
+}
+
+.box5 img {
+    margin: 0 auto var(--space-m);
+}
+
+.box5 img,
+.box6 img {
+    max-width: 14rem;
+}
+
+.box6 img {
+    margin-top: var(--space-m);
+}
+
+.box6,
+.box8 {
+    display: grid;
+    align-content: space-between;
+}
+
+.box7 img {
+    max-width: 13rem;
+    margin: var(--space-s) auto 0 0;
+}
+
+.box8 img {
+    max-width: 18rem;
+    margin-top: var(--space-m);
+}
+
+.nested-grid {
+    display: grid;
+    gap: var(--space-m);
+}
+
+
+@media only screen and (min-width: 650px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "box1 box1"
+        "box2 box3"
+        "box4 box6"
+        "box4 nest"
+        "box5 nest";
+    }
+
+    .box1 {
+        grid-area: box1;
+    }
+
+    .box2 {
+        grid-area: box2;
+        min-height: 270px;
+    }
+
+    .box3 {
+        grid-area: box3;
+    }
+
+    .box3 img {
+        margin-bottom: calc(var(--space-l) * -1);
+    }
+
+    .box4 {
+        grid-area: box4;
+    }
+    
+    .image-wrapper {
+        overflow: hidden;
+    }
+    
+    .box4 img {
+        width: 18rem;
+        max-width: none;
+    }
+
+    .box5 {
+        display: grid;
+        grid-area: box5;
+        grid-template-columns: unset;
+        align-content: center;
+    }
+
+    .box6 {
+        grid-area: box6;
+    }
+
+    .nested-grid {
+        grid-row: span 4;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(4, minmax(10rem, 1fr));
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "nest box1 box1 box4"
+        "nest box2 box3 box4"
+        "nest box6 box5 box5";
+    }
+
+    .nested-grid {
+        grid-area: nest;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .box4 {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .box4 img {
+        width: 20rem;
+    }
+
+    .box4 > h3,
+    .box4 > p {
+        padding-right: var(--space-m);
+    }
+
+    .box5 {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: var(--space-s);
+        text-align: left;
+    }
+
+    .box5 img {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .box6 img,
+    .box7 img,
+    .box8 img {
+        max-width: 100%;
+    }
+
+    .box7 img {
+        margin: var(--space-s) auto 0;
+    }
+}
